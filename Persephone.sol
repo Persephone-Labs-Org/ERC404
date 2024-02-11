@@ -147,9 +147,4 @@ contract Persephone is ERC404 {
         }
     }
 
-    function getRandomElement() private view returns (string memory color) {
-        uint randomHash = uint(keccak256(abi.encodePacked(block.timestamp, block.difficulty)));
-        uint index = randomHash % colors.length;
-        return colors[index];
-    }
 }
